@@ -28,6 +28,8 @@ body {
     padding-bottom: 40px;
 }
 
+/* Image Crop workspace */
+
 .image-container {
     padding: 20px;
     width: 800px;
@@ -54,6 +56,8 @@ body {
     display: block;
 }
 
+/* Banner preview */
+
 .preview-container {
     border: 2px solid rgba(255, 255, 255, 0.3);
     position: absolute;
@@ -76,12 +80,130 @@ body {
     left: 220px;
 }
 
+/* Action Buttons */
+
+.action-button {
+    display: inline-block;
+    position: absolute;
+    left: 320px
+}
+
+.action-button .upload,
+.action-button .save {
+    display: block;
+    width: 170px;
+    height: 35px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    transition-duration: 0.2s;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+/* Selectors: Dropdowns */
+
+.selectors-container {
+    position: absolute;
+    width: 570px;
+    min-height: 150px;
+    right: 20px;
+    top: 177px;
+}
+
+.dropdown {
+    position: relative;
+    margin: 2em;
+}
+
+.dropdown .selected {
+    font-size: 25px;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 5px;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select-clicked {
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8rem #26489a;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #000;
+    transition: 0.3s;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: rgb(255, 255, 255);
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #363a43;
+    color: #fff;
+}
+
+.active {
+    background: #23242a;
+    color: #fff
+}
+
+.menu-open {
+    display: block;
+    opacity: 1;
+}
+
 /* other stuff */
 
 footer {
-    position: block;
-    width: 100%;
-    left: 0;
+    position: absolute;
     bottom: 0;
     text-align: center;
     margin-top: 10px;
