@@ -180,11 +180,16 @@ body {
     overflow: auto;
 }
 
-.menu li {
+.menu li,
+.menu input  {
     padding: 0.7em 0.5em;
     margin: 0.3em 0;
     border-radius: 0.5em;
     cursor: pointer;
+}
+
+.menu input {
+    width: 100%;
 }
 
 .menu li:hover {
