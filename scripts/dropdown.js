@@ -1,12 +1,23 @@
+//Populate titles dropdown
+var dropdown_titles = document.getElementById("titles");
+
+fetch("http://127.0.0.1:5500/data/titles.json")
+    .then((response) => response.json())
+    .then((json) => json.titles.forEach(title => {
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(title));
+        dropdown_titles.appendChild(li);
+    }));
+
 //Get all dropdowns
-const dropdowns = document.querySelectorAll('.dropdown');
+var dropdowns = document.querySelectorAll('.dropdown');
 
 //Loop through all dropdown elements
 dropdowns.forEach(dropdown => {
     const select = dropdown.querySelector('.select');
     const caret = dropdown.querySelector('.caret');
     const menu = dropdown.querySelector('.menu');
-    const options = dropdown.querySelectorAll('.menu li');
+    var options = dropdown.querySelectorAll('.menu li');
     const selected = dropdown.querySelector('.selected');
 
     //Add a click event to the select element
