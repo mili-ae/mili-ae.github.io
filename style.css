@@ -1,5 +1,17 @@
 /* General */
 
+@font-face {
+    font-family: trajan-pro-regular;
+    src: url(images/fonts/Trajan.otf);
+}
+
+@font-face {
+    font-family: eurostileextended-roman-dtc-regular;
+    src: url(images/fonts/EurostileExtended-Roman.otf);
+}
+
+
+
 * {
     margin: 0;
     padding: 0;

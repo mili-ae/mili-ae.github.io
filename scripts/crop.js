@@ -6,7 +6,7 @@ var hiddenUpload = document.querySelector(".action-button .hidden-upload");
 var image_workspaceSpan = document.querySelector(".image-workspace span");
 var imagePreview_display = document.querySelector(".img-preview img");
 var preview_containerSpan = document.querySelector(".preview-container span");
-
+var nameBox = document.getElementById("name-input");
 
 // Prepare canvas
 var canvas;
@@ -54,12 +54,21 @@ hiddenUpload.onchange = () => {
                 var ctx = canvas.getContext("2d");
                 drawBgWol(ctx, croppedImage);
                 drawJobIcon(ctx);
+                
             })
             
         }
     }
     //Initialize cropperjs
     var cropper = new Cropper(image_workspace, options);
+
+    actionButton[1].onclick = () => {
+        var filename = nameBox.innerText + " Banner.png";
+        var link = document.createElement('a');
+        link.download = filename;
+        link.href = document.getElementById("banner-canvas").toDataURL();
+        link.click();
+    }
 }
 
 function drawBgWol(ctx, croppedImage) {
@@ -83,17 +92,33 @@ function drawBgWol(ctx, croppedImage) {
             ctx.drawImage(wol, 550, 0, 500, 290);
             var img = canvas.toDataURL("image/png");
             imagePreview_display.src = img;
+            drawNameAndTitle(ctx); //sloppy fix for text not appearing on canvas
         }
     }
+    
 }
 
 function drawJobIcon(ctx) {
     var jobIcon = new Image();
     jobIcon.src = "images/jobs/" + job.innerText.toLowerCase() + ".png";
-    console.log("images/jobs/" + job.innerText.toLowerCase() + ".png");
     jobIcon.onload = function() {
         ctx.drawImage(jobIcon, 0, 0);
-        var img = canvas.toDataURL("image/png");
-        imagePreview_display.src = img;
+        
     }
+    var img = canvas.toDataURL("image/png");
+    imagePreview_display.src = img;
+}
+
+function drawNameAndTitle(ctx) {
+    ctx.font = '65px trajan-pro-regular';
+    ctx.fillStyle = "#fff799"
+    ctx.fillText(title.innerText, 95, 76, 500);
+
+    ctx.font = "62px eurostileextended-roman-dtc-regular"
+    ctx.fillStyle = "#f1e9cf";
+    
+    ctx.fillText(nameBox.value.toUpperCase(), 35, 265, 700);
+
+    var img = canvas.toDataURL("image/png");
+    imagePreview_display.src = img;
 }
