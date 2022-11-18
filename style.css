@@ -238,6 +238,14 @@ input {
 
 /* other stuff */
 
+.known-issues h3,
+.known-issues-list {
+    margin: 10px;
+    position: relative;
+    left: 970px;
+    top: 30px;
+}
+
 footer {
     position: absolute;
     bottom: 0;
