@@ -80,6 +80,20 @@ body {
     left: 220px;
 }
 
+.preview-container--loading {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.img-preview img {
+    position: absolute;
+    bottom: 0.2px;
+    right: 12px;
+}
+
+canvas {
+    display: none;
+}
+
 /* Action Buttons */
 
 .action-button {

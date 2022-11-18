@@ -29,8 +29,11 @@
         </div>
         <div class="preview-container">
             <div class="preview-cover">
-                <div class="img-preview" style="height: 9rem; width: 16rem"></div>
+                <div class="img-preview" style="height: 9rem; width: 16rem">
+                    <img src="images/dps.png" id="preview" alt="">
+                </div>
                 <span>Banner Preview</span>
+                <span id="loading-prev-text" style="display: none">Loading Preview</span>
             </div>
         </div>
         <div class="action-button">
@@ -41,7 +44,7 @@
         <div class="selectors-container">
             <div class="dropdown">
                 <div class="select">
-                    <span class="selected">Warrior of Light</span>
+                    <span class="selected" id="current-title">Warrior of Light</span>
                     <div class="caret"></div>
                 </div>
                 <ul class="menu" id="titles">
@@ -51,11 +54,11 @@
             </div>
             <div class="dropdown">
                 <div class="select">
-                    <span class="selected">RDM</span>
+                    <span class="selected"  id="current-job">PLD</span>
                     <div class="caret"></div>
                 </div>
                 <ul class="menu" id="jobs">
-                    <li>PLD</li>
+                    <li class="active">PLD</li>
                     <li>WAR</li>
                     <li>DRK</li>
                     <li>GNB</li>
@@ -85,9 +88,10 @@
         </p>
     </footer>
 
-    <!-- <script type="text/javascript" src="data/titles.json"></script> -->
     <script src="scripts/dropdown.js"></script>
     <script src="scripts/searchBox.js"></script>
+    <script src="scripts/crop.js"></script>
+    <canvas id="banner-canvas"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js" integrity="sha512-ooSWpxJsiXe6t4+PPjCgYmVfr1NS5QXJACcR/FPpsdm6kqG1FmQ2SVyg2RXeVuCRBLr0lWHnWJP6Zs1Efvxzww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.js" integrity="sha512-ZK6m9vADamSl5fxBPtXw6ho6A4TuX89HUbcfvxa2v2NYNT/7l8yFGJ3JlXyMN4hlNbz0il4k6DvqbIW5CCwqkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
