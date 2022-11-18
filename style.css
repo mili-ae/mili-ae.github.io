@@ -238,12 +238,23 @@ input {
 
 /* other stuff */
 
+.known-issues {
+    position: absolute;
+    width: 570px;
+    min-height: 150px;
+    left: 950px;
+    bottom: 100px;
+}
+
 .known-issues h3,
 .known-issues-list {
     margin: 10px;
     position: relative;
-    left: 970px;
-    top: 30px;
+    
+}
+
+.known-issues-list li{
+    max-width: 450px;
 }
 
 footer {
