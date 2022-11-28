@@ -10,10 +10,14 @@ var nameBox = document.getElementById("name-input");
 
 // Prepare canvas
 var canvas;
+var ctx;
+var croppedImage;
+var cropper;
 setTimeout(() => {
     canvas = document.getElementById("banner-canvas");
     canvas.width = 1068;
     canvas.height = 293; // this is fucking dumb istg
+    ctx = canvas.getContext("2d");
 }, 1000);
 
 //Create map for backgrounds
@@ -49,27 +53,30 @@ hiddenUpload.onchange = () => {
             
             image_workspace.addEventListener("cropend", () => {
                 //Get cropped image
-                var croppedImage = this.cropper.getCroppedCanvas().toDataURL("image/png");
+                croppedImage = this.cropper.getCroppedCanvas().toDataURL("image/png");
                 
-                var ctx = canvas.getContext("2d");
                 drawBgWol(ctx, croppedImage);
                 drawJobIcon(ctx);
-                
             })
             
         }
     }
     //Initialize cropperjs
-    var cropper = new Cropper(image_workspace, options);
+    cropper = new Cropper(image_workspace, options);
 
     actionButton[1].onclick = () => {
-        var filename = nameBox.innerText + " Banner.png";
+        var filename = nameBox.value + " Banner.png";
         var link = document.createElement('a');
         link.download = filename;
         link.href = document.getElementById("banner-canvas").toDataURL();
         link.click();
     }
 }
+
+nameBox.addEventListener("keyup", () => {
+    drawBgWol(ctx, croppedImage);
+    drawJobIcon(ctx);
+})
 
 function drawBgWol(ctx, croppedImage) {
     var background = new Image();

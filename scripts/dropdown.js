@@ -1,3 +1,6 @@
+const cropEvent = new Event("cropend");
+var image_workspace = document.querySelector(".image-workspace img");
+
 //Populate titles dropdown
 var dropdown_titles = document.getElementById("titles");
 
@@ -51,6 +54,7 @@ setTimeout(function() {
 
                 //Add active class to clicked option element
                 option.classList.add("active");
+                image_workspace.dispatchEvent(cropEvent);
             });
         });
     });
