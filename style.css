@@ -268,3 +268,105 @@ footer {
 .hidden {
     display: none;
 }
+
+/* Adaptability */
+
+@media (max-height: 795px) {
+    .container {
+        height: 600px;
+    }
+}
+
+@media (max-width: 1880px) {
+    .preview-container {
+        top: 500px
+    }
+    .selectors-container {
+        top: 0;
+        width: 40%;
+    }
+    .known-issues {
+        top: 300px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .action-button {
+        left: 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .preview-container {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        right: -210px;
+    }
+    .selectors-container {
+        top: 0;
+        width: 35%;
+    }
+}
+
+@media (max-width: 1660px) {
+    .selectors-container {
+        top: 0;
+        width: 30%;
+    }
+    .known-issues {
+        left: 70%;
+    }
+}
+
+@media (max-width: 1585px) {
+    .known-issues {
+        display: none;
+    }
+    .action-button {
+        display: inline-block;
+        
+    }
+    .preview-container {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        right: -210px;
+    }
+    .selectors-container {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media (max-width: 1470px) {
+    .image-container {
+        width: 600px;
+        height: calc(100% - 400px);
+    }
+    .selectors-container {
+        top: 0;
+        right: 0;
+        width: 42%;
+    }
+}
+
+@media (max-width: 1370px) {
+    .selectors-container {
+        top: 0;
+        right: 0;
+        width: 38%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .selectors-container {
+        top: 0;
+        right: 0;
+        width: 35%;
+    }
+    .image-container {
+        width: 600px;
+        height: calc(100% - 200px);
+    }
+}

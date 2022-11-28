@@ -38,6 +38,7 @@ hiddenUpload.onchange = () => {
     var file = hiddenUpload.files[0];
     var url = window.URL.createObjectURL(new Blob([file], { type: "image/png" }));
 
+    // Dispose of an old image to allow loading of a new one
     if (image_workspace.src != "") {
         try { cropper.destroy(); }
         catch (error) {}
@@ -70,6 +71,7 @@ hiddenUpload.onchange = () => {
 
     //Initialize cropperjs
     cropper = new Cropper(image_workspace, options);
+    nameBox.disabled = false;
     
     actionButton[1].onclick = () => {
         var filename = nameBox.value + " Banner.png";
