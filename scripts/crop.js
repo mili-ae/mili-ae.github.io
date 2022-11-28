@@ -37,6 +37,12 @@ actionButton[0].onclick = () => hiddenUpload.click();
 hiddenUpload.onchange = () => {
     var file = hiddenUpload.files[0];
     var url = window.URL.createObjectURL(new Blob([file], { type: "image/png" }));
+
+    if (image_workspace.src != "") {
+        try { cropper.destroy(); }
+        catch (error) {}
+    }
+
     image_workspace.src = url;
     image_workspaceSpan.style.display = 'none';
     preview_containerSpan.style.display = 'none'
@@ -61,9 +67,10 @@ hiddenUpload.onchange = () => {
             
         }
     }
+
     //Initialize cropperjs
     cropper = new Cropper(image_workspace, options);
-
+    
     actionButton[1].onclick = () => {
         var filename = nameBox.value + " Banner.png";
         var link = document.createElement('a');
