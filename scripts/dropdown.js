@@ -1,7 +1,7 @@
 //Populate titles dropdown
 var dropdown_titles = document.getElementById("titles");
 
-fetch("http://127.0.0.1:5500/data/titles.json")
+fetch(window.location.href + "/data/titles.json")
     .then((response) => response.json())
     .then((json) => json.titles.forEach(title => {
         var li = document.createElement('li');
