@@ -8,6 +8,10 @@
         src: {
             type: String,
             required: true
+        },
+        aspectRatio: {
+            type: Number,
+            required: true
         }
     })
 
@@ -49,6 +53,10 @@
                 } catch (error) {
                     console.error("There was an error in watcher callback:", error)
                 }
+            },
+            aspectRatio(newRatio) {
+                this.cropperAspectRatio = newRatio;
+                this.drawEntireImage();
             }
         },
         mounted() {
@@ -77,7 +85,8 @@
                 ctx: null,
                 width: 1048,
                 height: 276,
-                isLoading: true
+                isLoading: true,
+                cropperAspectRatio: 16/9
             }
         },
         methods: {
@@ -118,7 +127,13 @@
                         // paste wol image
                         wolImage.src = this.src;
                         wolImage.onload = () => {
-                            this.ctx.drawImage(wolImage, 550, 0, 500, 290);
+                            if (this.cropperAspectRatio == 16/9) {
+                                this.ctx.drawImage(wolImage, 550, 0, 500, 290);
+                            }
+                            else {
+                                this.ctx.drawImage(wolImage, 650, -100, 400, 400);
+                            }
+                            
                             resolve();
                         }
                     }
