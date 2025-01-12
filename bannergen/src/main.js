@@ -8,10 +8,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 
-import { BiGithub, MdUploadfile } from "oh-vue-icons/icons";
+import { BiGithub, MdUploadfile, RiLoader2Line } from "oh-vue-icons/icons";
 addIcons(
     BiGithub,
-    MdUploadfile
+    MdUploadfile,
+    RiLoader2Line
 )
 
 const app = createApp(App);

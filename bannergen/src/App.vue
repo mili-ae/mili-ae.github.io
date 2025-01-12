@@ -24,7 +24,7 @@
       <div class="container bg-blackMute rounded-md grid grid-cols-2 grid-rows-2 pl-2 pr-2 place-items-center" v-if="imgSrc">
         <cropper-area :src="imgSrc" :aspect-ratio="aspectRatio" @image-cropped="setCroppedImage"></cropper-area>
         <div class="grid grid-rows-2 h-max gap-2">
-          <image-preview :wol-data="formData" :src="croppedImage" @image-generated="setDownloadLink"></image-preview>
+          <image-preview :formData="formData" :src="croppedImage" @image-generated="setDownloadLink"></image-preview>
           <cropper-controls :image-url="finalImageURL" @toggle-status-changed="setAspectRatio"></cropper-controls>
         </div>
         <text-inputs @form-data-change="setFormData" :imageUrl="finalImageURL"></text-inputs>

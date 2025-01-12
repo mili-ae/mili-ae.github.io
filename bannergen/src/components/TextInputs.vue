@@ -60,7 +60,7 @@
                 titles: titlesData.items,
                 jobs: jobsData.items,
                 formData: {
-                    job: "Paladin",
+                    job: "PLD",
                     name: "Name Surname",
                     title: "Warrior of Light",
                     level: 90
