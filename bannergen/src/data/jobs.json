@@ -1,0 +1,88 @@
+{
+    "items": [
+        {
+            "value": 0,
+            "label": "PLD"
+        },
+        {
+            "value": 1,
+            "label": "WAR"
+        },
+        {
+            "value": 2,
+            "label": "DRK"
+        },
+        {
+            "value": 3,
+            "label": "GNB"
+        },
+        {
+            "value": 4,
+            "label": "WHM"
+        },
+        {
+            "value": 5,
+            "label": "AST"
+        },
+        {
+            "value": 6,
+            "label": "SCH"
+        },
+        {
+            "value": 7,
+            "label": "SGE"
+        },
+        {
+            "value": 8,
+            "label": "DRG"
+        },
+        {
+            "value": 9,
+            "label": "SAM"
+        },
+        {
+            "value": 10,
+            "label": "MNK"
+        },
+        {
+            "value": 11,
+            "label": "NIN"
+        },
+        {
+            "value": 12,
+            "label": "RPR"
+        },
+        {
+            "value": 13,
+            "label": "VPR"
+        },
+        {
+            "value": 14,
+            "label": "BRD"
+        },
+        {
+            "value": 15,
+            "label": "MCH"
+        },
+        {
+            "value": 16,
+            "label": "DNC"
+        },
+        {
+            "value": 17,
+            "label": "SMN"
+        },
+        {
+            "value": 18,
+            "label": "BLM"
+        },
+        {
+            "value": 19,
+            "label": "RDM"
+        },
+        {
+            "value": 20,
+            "label": "PCT"
+        }
+    ]
+}

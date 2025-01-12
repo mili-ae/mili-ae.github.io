@@ -1,0 +1,21 @@
+import './assets/main.css';
+import VueCropper from 'vue-cropperjs';
+import 'cropperjs/dist/cropper.css';
+import Vueform from '@vueform/vueform'
+import vueformConfig from './../vueform.config'
+
+import { createApp } from 'vue'
+import App from './App.vue'
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+
+import { BiGithub, MdUploadfile } from "oh-vue-icons/icons";
+addIcons(
+    BiGithub,
+    MdUploadfile
+)
+
+const app = createApp(App);
+app.use(Vueform, vueformConfig)
+app.component("vue-cropper", VueCropper);
+app.component("v-icon", OhVueIcon);
+app.mount('#app')
