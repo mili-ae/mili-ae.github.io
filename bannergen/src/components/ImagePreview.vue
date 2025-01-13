@@ -63,7 +63,7 @@
             // wait until the component loads in 
             // then prepare canvas
             this.prepareCanvas();
-            this.$refs.imagePreview.src = "src/assets/images/Banner.png" // set a default image otherwise it breaks
+            this.$refs.imagePreview.src = "/images/Banner.png" // set a default image otherwise it breaks
             this.isLoading = false;
         },
         data() {
@@ -113,10 +113,10 @@
 
                     // pick background according to the job
                     if(this.roles.has(this.formData.job)) {
-                        background.src = "src/assets/images/roles/" + this.roles.get(this.formData.job);
+                        background.src = "/images/roles/" + this.roles.get(this.formData.job);
                     }
                     else {
-                        background.src = "src/assets/images/roles/dps.png";
+                        background.src = "/images/roles/dps.png";
                     };
 
                     background.onload = () => {
@@ -167,7 +167,7 @@
             drawJob() {
                 return new Promise((resolve) => {
                     const jobIcon = new Image();
-                    jobIcon.src = "src/assets/images/jobs/" + this.formData.job.toLowerCase() + ".png";
+                    jobIcon.src = "/images/jobs/" + this.formData.job.toLowerCase() + ".png";
                     jobIcon.onload = () => {
                         this.ctx.drawImage(jobIcon, 0, 0);
                         resolve();

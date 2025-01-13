@@ -5,17 +5,17 @@
 
 @font-face {
   font-family: trajan-pro-regular;
-  src: url(src/assets/fonts/Trajan.otf) format(opentype);
+  src: url(/fonts/Trajan.otf) format(opentype);
 }
 
 @font-face {
   font-family: eurostileextended-roman-dtc-regular;
-  src: url(src/assets/fonts/EurostileExtended-Roman.otf) format(opentype);
+  src: url(/fonts/EurostileExtended-Roman.otf) format(opentype);
 }
 
 @font-face {
   font-family: eurostileBold;
-  src: url(src/assets/fonts/EurostileBold.ttf) format(truetype);
+  src: url(/fonts/EurostileBold.ttf) format(truetype);
 }
 
 #app {
