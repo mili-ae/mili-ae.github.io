@@ -14,5 +14,9 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
+  },
+  optimizeDeps: {
+    include: ["vue-cropperjs"],
+    entries: ['./src/main.js']
   }
 })
