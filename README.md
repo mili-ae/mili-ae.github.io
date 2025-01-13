@@ -1,5 +1,5 @@
 # mili-ae.github.io
-A simple Trust Duty banner generator for youe character.
+A simple Trust Duty banner generator for your character.
 
 __Updated to include DT titles and jobs up to 7.1!__
 
