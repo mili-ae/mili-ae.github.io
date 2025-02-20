@@ -1,6 +1,6 @@
 import './assets/main.css';
-import VueCropper from 'vue-cropperjs';
-import 'cropperjs/dist/cropper.css';
+import VueCropper from '../node_modules/vue-cropperjs/VueCropper';
+import '../node_modules/cropperjs/dist/cropper.css';
 import Vueform from '@vueform/vueform'
 import vueformConfig from './../vueform.config'
 
